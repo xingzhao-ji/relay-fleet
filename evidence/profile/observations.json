@@ -1,0 +1,71 @@
+{
+  "kind": "JDK Flight Recorder observed samples",
+  "source_recording": "control-plane.jfr",
+  "scope": "Java control plane after restart, includes startup, recovery and separate microbenchmark",
+  "event_counts": {
+    "jdk.ExecutionSample": 43,
+    "jdk.GarbageCollection": 4,
+    "jdk.CPULoad": 10
+  },
+  "top_sampled_leaf_methods": [
+    [
+      "sun.security.provider.SHA2.implCompress0",
+      4
+    ],
+    [
+      "java.util.concurrent.locks.ReentrantLock$NonfairSync.initialTryLock",
+      2
+    ],
+    [
+      "java.util.jar.JarFile.getInputStream",
+      1
+    ],
+    [
+      "org.sqlite.SQLiteJDBCLoader.contentsEquals",
+      1
+    ],
+    [
+      "jdk.internal.loader.URLClassPath.getResource",
+      1
+    ],
+    [
+      "java.util.jar.JavaUtilJarAccessImpl.getTrustedAttributes",
+      1
+    ],
+    [
+      "java.util.HashMap.getNode",
+      1
+    ],
+    [
+      "java.util.ServiceLoader.loadProvider",
+      1
+    ],
+    [
+      "jdk.internal.org.objectweb.asm.ByteVector.putUTF8",
+      1
+    ],
+    [
+      "io.grpc.netty.shaded.io.netty.util.internal.logging.Slf4JLogger.debug",
+      1
+    ]
+  ],
+  "first_relay_frame_by_sample": [
+    [
+      "relay.Store.ingest",
+      1
+    ],
+    [
+      "relay.proto.Config$Builder.setJson",
+      1
+    ],
+    [
+      "relay.FleetService$1Session.flush",
+      1
+    ],
+    [
+      "relay.Store.sha",
+      1
+    ]
+  ],
+  "limitations": "43 execution samples are sparse; startup/JIT included. This is a sampling profile, not exclusive function duration or a bottleneck proof. Recorded before the subsequent strict JSON parsing hardening; transport/storage commit implementation is the same."
+}

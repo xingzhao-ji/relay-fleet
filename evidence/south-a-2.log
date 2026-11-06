@@ -1,0 +1,169 @@
+I1023 11:48:12.232046 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(15, generation: 1)
+I1023 11:48:12.232124 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(14, generation: 1)
+I1023 11:48:12.232142 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(15, generation: 1)
+I1023 11:48:12.232151 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(14, generation: 1)
+I1023 11:48:12.232160 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(15, generation: 1)
+I1023 11:48:12.232167 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(14, generation: 1)
+I1023 11:48:12.232175 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(15, generation: 1)
+I1023 11:48:12.232183 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(14, generation: 1)
+I1023 11:48:12.232191 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(15, generation: 1)
+I1023 11:48:12.232198 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(14, generation: 1)
+I1023 11:48:12.232205 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(15, generation: 1)
+I1023 11:48:12.232211 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(14, generation: 1)
+I1023 11:48:12.232219 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(15, generation: 1)
+I1023 11:48:12.232224 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(14, generation: 1)
+I1023 11:48:12.232231 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(15, generation: 1)
+I1023 11:48:12.232236 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(14, generation: 1)
+I1023 11:48:12.232242 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(15, generation: 1)
+I1023 11:48:12.232248 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(14, generation: 1)
+I1023 11:48:12.232254 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(15, generation: 1)
+I1023 11:48:12.232259 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(14, generation: 1)
+I1023 11:48:12.232266 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(15, generation: 1)
+I1023 11:48:12.232273 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(14, generation: 1)
+I1023 11:48:12.232279 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(15, generation: 1)
+I1023 11:48:12.232284 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(14, generation: 1)
+I1023 11:48:12.232289 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(15, generation: 1)
+I1023 11:48:12.232294 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(14, generation: 1)
+I1023 11:48:12.232300 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(15, generation: 1)
+I1023 11:48:12.232306 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(14, generation: 1)
+I1023 11:48:12.232311 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(15, generation: 1)
+I1023 11:48:12.232316 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(14, generation: 1)
+I1023 11:48:12.232321 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(15, generation: 1)
+I1023 11:48:12.232326 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(14, generation: 1)
+I1023 11:48:12.232333 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(15, generation: 1)
+I1023 11:48:12.232338 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(14, generation: 1)
+I1023 11:48:12.232347 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(15, generation: 1)
+I1023 11:48:12.232352 3519379 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(14, generation: 1)
+{"time_ms": 1792781292373, "event": "config_applied", "device": "sim-a", "version": 1}
+{"time_ms": 1792781292374, "event": "ack", "device": "sim-a", "through": 0, "depth": 3}
+{"time_ms": 1792781292431, "event": "ack", "device": "sim-a", "through": 7, "depth": 0}
+{"time_ms": 1792781292456, "event": "ack", "device": "sim-a", "through": 9, "depth": 1}
+{"time_ms": 1792781292481, "event": "ack", "device": "sim-a", "through": 11, "depth": 1}
+{"time_ms": 1792781292501, "event": "reconnect", "device": "sim-a", "status": "UNAVAILABLE", "details": "Stream removed (Socket closed)", "depth": 3}
+{"time_ms": 1792781292555, "event": "reconnect", "device": "sim-a", "status": "UNAVAILABLE", "details": "failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:62692: Handshake read failed (recvmsg:Connection reset by peer (54))", "depth": 7}
+{"time_ms": 1792781292661, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781292662, "event": "reconnect", "device": "sim-a", "status": "UNAVAILABLE", "details": "failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:62692: Handshake read failed (recvmsg:Connection reset by peer (54))", "depth": 16}
+{"time_ms": 1792781292714, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781292764, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781292815, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781292868, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781292895, "event": "reconnect", "device": "sim-a", "status": "UNAVAILABLE", "details": "failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:62692: Handshake read failed (recvmsg:Connection reset by peer (54))", "depth": 16}
+{"time_ms": 1792781292918, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781292971, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781293023, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781293076, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781293127, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781293180, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781293231, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781293281, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781293333, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781293333, "event": "reconnect", "device": "sim-a", "status": "UNAVAILABLE", "details": "failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:62692: Handshake read failed (recvmsg:Connection reset by peer (54))", "depth": 16}
+{"time_ms": 1792781293385, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781293437, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781293489, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781293540, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781293593, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781293645, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781293698, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781293750, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781293802, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781293854, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781293906, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781293959, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781294010, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781294061, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781294113, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781294164, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781294216, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781294268, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781294293, "event": "reconnect", "device": "sim-a", "status": "UNAVAILABLE", "details": "failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:62692: Handshake read failed (recvmsg:Connection reset by peer (54))", "depth": 16}
+{"time_ms": 1792781294318, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781294369, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781294421, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781294472, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781294525, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781294577, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781294629, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781294680, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781294731, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781294782, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781294835, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781294885, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781294936, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781294987, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781295038, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781295090, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781295142, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781295192, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781295243, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781295294, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781295345, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781295398, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781295448, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}
+{"time_ms": 1792781295449, "event": "config_applied", "device": "sim-a", "version": 2}
+{"time_ms": 1792781295449, "event": "ack", "device": "sim-a", "through": 27, "depth": 0}
+{"time_ms": 1792781295474, "event": "ack", "device": "sim-a", "through": 27, "depth": 0}
+{"time_ms": 1792781295528, "event": "ack", "device": "sim-a", "through": 29, "depth": 1}
+{"time_ms": 1792781295551, "event": "ack", "device": "sim-a", "through": 31, "depth": 1}
+{"time_ms": 1792781295575, "event": "ack", "device": "sim-a", "through": 33, "depth": 1}
+{"time_ms": 1792781295598, "event": "ack", "device": "sim-a", "through": 35, "depth": 1}
+{"time_ms": 1792781295622, "event": "ack", "device": "sim-a", "through": 37, "depth": 1}
+{"time_ms": 1792781295646, "event": "ack", "device": "sim-a", "through": 40, "depth": 0}
+{"time_ms": 1792781295669, "event": "ack", "device": "sim-a", "through": 42, "depth": 0}
+{"time_ms": 1792781295694, "event": "ack", "device": "sim-a", "through": 43, "depth": 1}
+{"time_ms": 1792781295718, "event": "ack", "device": "sim-a", "through": 46, "depth": 0}
+{"time_ms": 1792781295742, "event": "ack", "device": "sim-a", "through": 47, "depth": 1}
+{"time_ms": 1792781295766, "event": "ack", "device": "sim-a", "through": 49, "depth": 1}
+{"time_ms": 1792781295789, "event": "ack", "device": "sim-a", "through": 52, "depth": 0}
+{"time_ms": 1792781295811, "event": "ack", "device": "sim-a", "through": 53, "depth": 1}
+{"time_ms": 1792781295836, "event": "ack", "device": "sim-a", "through": 55, "depth": 1}
+{"time_ms": 1792781295859, "event": "ack", "device": "sim-a", "through": 58, "depth": 0}
+{"time_ms": 1792781295882, "event": "ack", "device": "sim-a", "through": 60, "depth": 0}
+{"time_ms": 1792781295906, "event": "ack", "device": "sim-a", "through": 62, "depth": 0}
+{"time_ms": 1792781295929, "event": "ack", "device": "sim-a", "through": 64, "depth": 0}
+{"time_ms": 1792781295952, "event": "ack", "device": "sim-a", "through": 65, "depth": 1}
+{"time_ms": 1792781295975, "event": "ack", "device": "sim-a", "through": 68, "depth": 0}
+{"time_ms": 1792781295998, "event": "ack", "device": "sim-a", "through": 70, "depth": 0}
+{"time_ms": 1792781296024, "event": "ack", "device": "sim-a", "through": 71, "depth": 1}
+{"time_ms": 1792781296047, "event": "ack", "device": "sim-a", "through": 74, "depth": 0}
+{"time_ms": 1792781296070, "event": "ack", "device": "sim-a", "through": 76, "depth": 0}
+{"time_ms": 1792781296093, "event": "ack", "device": "sim-a", "through": 77, "depth": 1}
+{"time_ms": 1792781296118, "event": "ack", "device": "sim-a", "through": 80, "depth": 0}
+{"time_ms": 1792781296142, "event": "ack", "device": "sim-a", "through": 82, "depth": 0}
+{"time_ms": 1792781296164, "event": "reconnect", "device": "sim-a", "status": "DEADLINE_EXCEEDED", "details": "Stream removed (RST_STREAM (Received RST_STREAM with error code 8))", "depth": 2}
+{"time_ms": 1792781296227, "event": "ack", "device": "sim-a", "through": 89, "depth": 0}
+{"time_ms": 1792781296250, "event": "ack", "device": "sim-a", "through": 90, "depth": 1}
+{"time_ms": 1792781296274, "event": "ack", "device": "sim-a", "through": 92, "depth": 1}
+{"time_ms": 1792781296298, "event": "ack", "device": "sim-a", "through": 94, "depth": 1}
+{"time_ms": 1792781296323, "event": "ack", "device": "sim-a", "through": 96, "depth": 1}
+{"time_ms": 1792781296346, "event": "ack", "device": "sim-a", "through": 98, "depth": 1}
+{"time_ms": 1792781296370, "event": "ack", "device": "sim-a", "through": 101, "depth": 0}
+{"time_ms": 1792781296394, "event": "ack", "device": "sim-a", "through": 102, "depth": 1}
+{"time_ms": 1792781296418, "event": "ack", "device": "sim-a", "through": 105, "depth": 0}
+{"time_ms": 1792781296440, "event": "ack", "device": "sim-a", "through": 107, "depth": 0}
+{"time_ms": 1792781296463, "event": "ack", "device": "sim-a", "through": 109, "depth": 0}
+{"time_ms": 1792781296488, "event": "ack", "device": "sim-a", "through": 110, "depth": 1}
+{"time_ms": 1792781296512, "event": "ack", "device": "sim-a", "through": 112, "depth": 1}
+{"time_ms": 1792781296537, "event": "ack", "device": "sim-a", "through": 114, "depth": 1}
+{"time_ms": 1792781296560, "event": "ack", "device": "sim-a", "through": 117, "depth": 0}
+{"time_ms": 1792781296582, "event": "ack", "device": "sim-a", "through": 119, "depth": 0}
+{"time_ms": 1792781296606, "event": "ack", "device": "sim-a", "through": 121, "depth": 0}
+{"time_ms": 1792781296629, "event": "ack", "device": "sim-a", "through": 123, "depth": 0}
+{"time_ms": 1792781296651, "event": "ack", "device": "sim-a", "through": 125, "depth": 0}
+{"time_ms": 1792781296674, "event": "ack", "device": "sim-a", "through": 127, "depth": 0}
+{"time_ms": 1792781296697, "event": "ack", "device": "sim-a", "through": 129, "depth": 0}
+{"time_ms": 1792781296722, "event": "ack", "device": "sim-a", "through": 130, "depth": 1}
+{"time_ms": 1792781296745, "event": "ack", "device": "sim-a", "through": 132, "depth": 1}
+{"time_ms": 1792781296769, "event": "ack", "device": "sim-a", "through": 134, "depth": 1}
+{"time_ms": 1792781296792, "event": "ack", "device": "sim-a", "through": 137, "depth": 0}
+{"time_ms": 1792781296815, "event": "ack", "device": "sim-a", "through": 138, "depth": 1}
+{"time_ms": 1792781296840, "event": "ack", "device": "sim-a", "through": 140, "depth": 1}
+{"time_ms": 1792781296864, "event": "ack", "device": "sim-a", "through": 142, "depth": 1}
+{"time_ms": 1792781296886, "event": "ack", "device": "sim-a", "through": 144, "depth": 1}
+{"time_ms": 1792781296911, "event": "ack", "device": "sim-a", "through": 146, "depth": 1}
+{"time_ms": 1792781296933, "event": "reconnect", "device": "sim-a", "status": "DEADLINE_EXCEEDED", "details": "Stream removed (RST_STREAM (Received RST_STREAM with error code 8))", "depth": 3}
+{"time_ms": 1792781296995, "event": "ack", "device": "sim-a", "through": 154, "depth": 0}
+{"time_ms": 1792781297018, "event": "ack", "device": "sim-a", "through": 156, "depth": 0}
+{"time_ms": 1792781297042, "event": "ack", "device": "sim-a", "through": 158, "depth": 0}
+{"time_ms": 1792781297064, "event": "ack", "device": "sim-a", "through": 160, "depth": 0}
+{"time_ms": 1792781297071, "event": "agent_summary", "device": "sim-a", "reconnects": 8, "backpressure": 55, "accepted": 160, "duplicates": 0, "max_depth": 16, "simulated": true, "acked": 160, "remaining": 0, "applied_version": 2}

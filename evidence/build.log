@@ -1,0 +1,13 @@
+> Task :protobufDummy UP-TO-DATE
+> Task :extractIncludeProto UP-TO-DATE
+> Task :extractProto UP-TO-DATE
+> Task :generateProto UP-TO-DATE
+> Task :compileJava
+> Task :processResources UP-TO-DATE
+> Task :classes
+> Task :jar
+> Task :startScripts
+> Task :installDist
+
+BUILD SUCCESSFUL in 1s
+8 actionable tasks: 4 executed, 4 up-to-date

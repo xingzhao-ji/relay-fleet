@@ -1,0 +1,36 @@
+> Task :protobufDummy UP-TO-DATE
+> Task :extractIncludeProto UP-TO-DATE
+> Task :extractProto UP-TO-DATE
+> Task :generateProto UP-TO-DATE
+> Task :compileJava
+> Task :processResources UP-TO-DATE
+> Task :classes
+> Task :extractIncludeTestProto UP-TO-DATE
+> Task :extractTestProto UP-TO-DATE
+> Task :generateTestProto NO-SOURCE
+> Task :compileTestJava
+> Task :processTestResources NO-SOURCE
+> Task :testClasses
+
+> Task :test
+
+StoreTest > configCompareAndSwapAndAcknowledgmentNeverRegress() PASSED
+
+StoreTest > concurrentRetriesRemainUnique() PASSED
+
+StoreTest > revokedDeviceCannotContinueExistingSession() PASSED
+
+StoreTest > conflictingSequenceAndGapHaveNoEffect() PASSED
+
+StoreTest > batchRollsBackBeforeAckWhenLaterSampleConflicts() PASSED
+
+StoreTest > certificateBoundIdentityRejectsSpoofAndTenantCannotQuery() PASSED
+
+StoreTest > oversizeAndUnsupportedProtocolRejectedBeforeWrite() PASSED
+
+StoreTest > replayHasOneEffectAndSurvivesReopen() PASSED
+Persisted dependency lock state for buildscript of root project 'relay-fleet'
+Persisted dependency lock state for root project 'relay-fleet'
+
+BUILD SUCCESSFUL in 2s
+9 actionable tasks: 3 executed, 6 up-to-date

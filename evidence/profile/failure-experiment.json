@@ -1,0 +1,348 @@
+{
+  "schema_version": 1,
+  "kind": "local_simulated_fleet_failure_experiment",
+  "simulation": true,
+  "hardware_claim": false,
+  "started_utc": "2026-10-23T18:30:39Z",
+  "environment": {
+    "os": "macOS-27.0.1-arm64-arm-64bit",
+    "python": "3.12.12",
+    "machine": "arm64",
+    "java": "21"
+  },
+  "timeline": [
+    {
+      "event": "connected",
+      "elapsed_s": 3.5758,
+      "committed": [
+        [
+          "north",
+          "sim-a",
+          13
+        ],
+        [
+          "north",
+          "sim-b",
+          13
+        ],
+        [
+          "south",
+          "sim-a",
+          9
+        ]
+      ]
+    },
+    {
+      "event": "network_cut_live_sockets",
+      "elapsed_s": 3.5759
+    },
+    {
+      "event": "offline_queues_full",
+      "elapsed_s": 3.7657,
+      "depths": {
+        "sim-a": 16,
+        "sim-b": 16,
+        "south-a": 16
+      }
+    },
+    {
+      "event": "sigkill_agent_and_control_plane",
+      "elapsed_s": 3.7771
+    },
+    {
+      "event": "network_restored",
+      "elapsed_s": 7.2821
+    },
+    {
+      "event": "fleet_converged",
+      "elapsed_s": 14.0449,
+      "total_telemetry": 480
+    },
+    {
+      "event": "checks_complete",
+      "elapsed_s": 15.9065
+    }
+  ],
+  "checks": {
+    "negative_authorization": {
+      "passed": true,
+      "statuses": {
+        "device_spoof": "PERMISSION_DENIED",
+        "device_operator_rpc": "PERMISSION_DENIED",
+        "cross_tenant_query": "NOT_FOUND",
+        "unregistered": "UNAUTHENTICATED",
+        "rogue": "UNAVAILABLE"
+      }
+    },
+    "spool_survived_sigkill": {
+      "passed": true,
+      "pending_sequences": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ]
+    },
+    "recovery_no_missing_or_duplicate_effects": {
+      "passed": true,
+      "rows": [
+        [
+          "north",
+          "sim-a",
+          160,
+          1,
+          160,
+          160
+        ],
+        [
+          "north",
+          "sim-b",
+          160,
+          1,
+          160,
+          160
+        ],
+        [
+          "south",
+          "sim-a",
+          160,
+          1,
+          160,
+          160
+        ]
+      ],
+      "total": 480
+    },
+    "config_converged_after_restart_and_clock_skew": {
+      "passed": true,
+      "desired_applied_version": 2,
+      "clock_skew_ms": [
+        3599973,
+        3599759
+      ]
+    },
+    "tenant_isolation_same_device_name": {
+      "passed": true,
+      "north_devices": 2,
+      "south_devices": 1
+    },
+    "lost_ack_replay_exactly_one_effect": {
+      "passed": true,
+      "duplicate_ack": 1,
+      "database_rows": 1,
+      "spool_rows_after_ack": 0
+    },
+    "conflicting_sequence_rejected": {
+      "passed": true,
+      "status": "ALREADY_EXISTS"
+    },
+    "stale_config_cannot_overwrite": {
+      "passed": true,
+      "desired_cas_status": "ABORTED",
+      "applied_after_stale_ack": 2
+    },
+    "revocation_on_existing_stream": {
+      "passed": true,
+      "status": "PERMISSION_DENIED"
+    }
+  },
+  "method": {
+    "devices": 3,
+    "samples_per_device": 160,
+    "offline_capacity": 16,
+    "batch_max": 32,
+    "rpc_deadline_s": 0.7,
+    "network": "loopback TCP relay forcibly closes live sockets; TLS remains end to end"
+  },
+  "performance": {
+    "method": "100 sequential 32-sample batches on one warmed mTLS bidi stream; SQLite WAL synchronous FULL; local loopback; no disk fsync interception; includes commit + ACK, excludes PKI/startup/warmup",
+    "samples": 3200,
+    "batches": 100,
+    "elapsed_s": 1.015385167003842,
+    "samples_per_s": 3151.5134394196757,
+    "batch_p50_ms": 7.262270999490283,
+    "batch_p95_ms": 28.069624997442588,
+    "batch_p99_ms": 30.929291009670123,
+    "batch_latency_ms": [
+      2.75966600747779,
+      2.8417499852366745,
+      3.05204201140441,
+      3.253957984270528,
+      3.2933329930529,
+      3.397291002329439,
+      3.6107499909121543,
+      3.745333000551909,
+      3.774457989493385,
+      3.8469999853987247,
+      3.9006250153761357,
+      3.945250005926937,
+      4.282625013729557,
+      4.3362499854993075,
+      4.372915980638936,
+      4.40666702343151,
+      4.479791998164728,
+      4.486541991354898,
+      4.634000011719763,
+      4.668834008043632,
+      4.787459009094164,
+      4.814625019207597,
+      4.817540990188718,
+      4.834457999095321,
+      5.119958979776129,
+      5.186916998354718,
+      5.293667025398463,
+      5.307416984578595,
+      5.319417017744854,
+      5.343374999938533,
+      5.493292002938688,
+      5.7255000283475965,
+      5.785333021776751,
+      5.8122919872403145,
+      5.862082995008677,
+      5.886291997740045,
+      6.109499983722344,
+      6.162458012113348,
+      6.203791999723762,
+      6.20800000615418,
+      6.2242910207714885,
+      6.28220898215659,
+      6.320000014966354,
+      6.3270000100601465,
+      6.334709003567696,
+      6.732375011779368,
+      6.736624985933304,
+      6.988124980125576,
+      7.005541992839426,
+      7.237209007143974,
+      7.2873329918365926,
+      7.335625006817281,
+      7.495416997699067,
+      7.781082997098565,
+      7.923416997073218,
+      8.062667009653524,
+      8.101207989966497,
+      8.107333997031674,
+      8.258707995992154,
+      8.78987499163486,
+      8.847167016938329,
+      9.104791010031477,
+      9.953625005437061,
+      9.959584014723077,
+      10.301915986929089,
+      10.437125019961968,
+      10.514334018807858,
+      10.66245898255147,
+      10.812041000463068,
+      11.020790989277884,
+      11.119375005364418,
+      11.168999975780025,
+      11.249999981373549,
+      11.385333025828004,
+      11.415291985031217,
+      11.647208011709154,
+      12.150249996921048,
+      12.61837501078844,
+      13.662292010849342,
+      14.185999985784292,
+      14.225541992345825,
+      14.41375000285916,
+      14.618749992223457,
+      14.832209009910002,
+      15.246499999193475,
+      16.53995897504501,
+      17.0476250059437,
+      17.180875001940876,
+      19.716084003448486,
+      20.362582989037037,
+      21.407749998616055,
+      21.461417025420815,
+      24.96795798651874,
+      25.960250000935048,
+      28.069624997442588,
+      28.51274999557063,
+      29.350750002777204,
+      29.464625025866553,
+      30.929291009670123,
+      35.160958010237664
+    ],
+    "not_a_scale_claim": true
+  },
+  "operator_snapshot": {
+    "devices": [
+      {
+        "tenant": "north",
+        "device_id": "bench",
+        "last_sequence": "3200",
+        "desired": {
+          "version": "0",
+          "json": "",
+          "sha256": ""
+        },
+        "last_seen_ms": "1792780255303",
+        "clock_skew_ms": "-1792780254303",
+        "telemetry_count": "3200",
+        "applied_version": "0",
+        "revoked": false
+      },
+      {
+        "tenant": "north",
+        "device_id": "replay",
+        "last_sequence": "1",
+        "desired": {
+          "version": "0",
+          "json": "",
+          "sha256": ""
+        },
+        "last_seen_ms": "1792780254163",
+        "clock_skew_ms": "-1792780252654",
+        "telemetry_count": "1",
+        "revoked": true,
+        "applied_version": "0"
+      },
+      {
+        "tenant": "north",
+        "device_id": "sim-a",
+        "last_sequence": "160",
+        "desired": {
+          "version": "2",
+          "json": "{\"sample_interval_ms\":10,\"revision\":\"after-outage\"}",
+          "sha256": "9f8244b41021f0884bd06816d751ea28c1d6c54ed45f5969476051a1357864f3"
+        },
+        "applied_version": "2",
+        "last_seen_ms": "1792780254113",
+        "clock_skew_ms": "3599973",
+        "telemetry_count": "160",
+        "revoked": false
+      },
+      {
+        "tenant": "north",
+        "device_id": "sim-b",
+        "last_sequence": "160",
+        "desired": {
+          "version": "2",
+          "json": "{\"sample_interval_ms\":10,\"revision\":\"after-outage\"}",
+          "sha256": "9f8244b41021f0884bd06816d751ea28c1d6c54ed45f5969476051a1357864f3"
+        },
+        "applied_version": "2",
+        "last_seen_ms": "1792780251594",
+        "clock_skew_ms": "3599759",
+        "telemetry_count": "160",
+        "revoked": false
+      }
+    ]
+  },
+  "passed": true,
+  "duration_s": 16.505
+}

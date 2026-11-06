@@ -1,0 +1,269 @@
+{
+  "publication_date": "2026-11-06",
+  "historical_date": "2026-10-23",
+  "transformations": [
+    {
+      "file": "README.md",
+      "reason": "standalone clone and bounded test instructions; separate historical experiment; remove private hiring/portfolio mapping",
+      "source_sha256": "3faaa95033362fb946f58f336c40e6a64b53563dddbe84db9e0a0193e0b0cfd9",
+      "published_sha256": "309ac7cac49a9926db89fe2965cd4f73e7e29bf43124cd33f6269720688f777c"
+    },
+    {
+      "file": "docs/independent-employer-review.md",
+      "reason": "retain technical findings and historical outcomes; remove private r\u00e9sum\u00e9 baseline/scoring",
+      "source_sha256": "db6a152dc2e8d5ae3a58f35d8e4e3fed84c3d8dbb15f6540b8a7d1b3ef963d28",
+      "published_sha256": "95728b9ebc1f0971378275f976be9dd746727e5d7bef90ffc319a7d2a1e7233b"
+    },
+    {
+      "file": "docs/validation.md",
+      "reason": "disclose excluded raw profiling binary; preserve historical profiling outcomes",
+      "source_sha256": "70c4d81748560a01c2834d1276b01dc95dcaa92733ed9844bdbfe3e9ba671fda",
+      "published_sha256": "b797982db6ebdfb8de9a046dd02557743ac8c2b285595ac074c10111cfd3154f"
+    },
+    {
+      "file": "evidence/agent-cancellation.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "bdb24d24c748a79a0c4dbd1817374abcd444022b8af5e88ac994e3fb9e2ff7dc",
+      "published_sha256": "7f0bc054b59aafa4625bc004e98ab9171b6c9f243c2bd299d3e947a2d4da45d3"
+    },
+    {
+      "file": "evidence/dependency-install.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "a850ad9e654a1eabce400b3e6822f92316d0e2e7c6ce42edb8a2a7cb1b085ff7",
+      "published_sha256": "bd69c1619841b7e59ce55a33489100d6aa2842c78aa073dc1c9a704da9682411"
+    },
+    {
+      "file": "evidence/final-python.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "146c7a59309b1149c10035a9ae54f0057b9f26ef333765e716d64466c0ddaa97",
+      "published_sha256": "82f75ebdc46c0483cf435c373596a2ac4b908606a19efaba1d13b1acad2a32c5"
+    },
+    {
+      "file": "evidence/green-agent.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "8d9fb3b02d1771d9da45b77deee6d6cf70464333a5540f21842320d3fe8abec2",
+      "published_sha256": "0763c9354877caa6a964fe4abfc0f21fbac44653bb5747c5a5e2699384e73014"
+    },
+    {
+      "file": "evidence/green-pagination.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "f84a1229a65b989eab409888e1945a1e3cae011afc7e5170354afa15d8c82e51",
+      "published_sha256": "f12dd9f3123d1aea26cbd7f93f11a185e852745995acd64b1ab87480c5b2ba27"
+    },
+    {
+      "file": "evidence/green-python.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "fe2ec356390b0ee4ce38a51c88f07e763cdcf02ed7f98604ad1fdf228765fde4",
+      "published_sha256": "0959fa03d7444a78add3fa8ade66c2538f2e1f29dd15f9def9ec66cd9b2cdf91"
+    },
+    {
+      "file": "evidence/green-transport.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "ee474ef423b6ff2e9d43ffb5741dec1177f48ecea22047b4d7f0dc37fc445f72",
+      "published_sha256": "006fdb899076542bb23183982fb7108bb76a21c96dbea205c6c4b3edc2edfa2a"
+    },
+    {
+      "file": "evidence/grpc-upgrade.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "d817737ff63dbf42b65b64dcb13ccc219d57ce5f1048626fd33013fdc185d2fd",
+      "published_sha256": "0918be6b3f10e3c4e57beb1ead5083fc72f5db35361aaca1339ae1f2a3b3c4cd"
+    },
+    {
+      "file": "evidence/handshake-diagnostic.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "f7b654655007cd69e00f540a6c65ea8357254e12d8b665dd454eb8f7df5b2a3f",
+      "published_sha256": "b5e6210bd08536b46894dcf996df02bf4d6c3291e675025d2f4c36ec9e5a8de8"
+    },
+    {
+      "file": "evidence/pagination-full-verification.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "131067443ee9e29f993900e3f9e972c140805323edf44fbfe6aecdaab0378c07",
+      "published_sha256": "85fc84a7556c21fb9a29a77553a50044d2a5e26a97d29adef96b8d77771ec079"
+    },
+    {
+      "file": "evidence/reconnect-diagnostic.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "4008f3678b4c5de0313aa09802edf5003d77fd77b192b21e5db8a09ad7372b5d",
+      "published_sha256": "46cc7e260d3cff764797418fe0f49deb76d256a38faae70daf12805096d27151"
+    },
+    {
+      "file": "evidence/red-ack-loss-harness.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "302262cefcaac47e27cc0b6b23f9b835ec252becc399152ec611d2f9d05373d7",
+      "published_sha256": "2a72e48bf8600da43c104967f1180fc671bf40605a33f1488a28a494e3a4b9a3"
+    },
+    {
+      "file": "evidence/red-agent-outage.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "f7beed827df74bb12a7b67a94ed715a520976030da47fcee05d5624771f2064d",
+      "published_sha256": "2daf086a1a7b5006ae08a01f4698caa37df883016713aa474efbc227d743a4cc"
+    },
+    {
+      "file": "evidence/red-agent.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "bcc4ad655e8bef07e3cf19774f01eb0b5648856ac548e88be01c9310af299900",
+      "published_sha256": "66ce454c5650c624a7df4bb439abd238311c59c631db2a051b26485eae842013"
+    },
+    {
+      "file": "evidence/red-config-validation.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "3587c2569cafbc0c6fd4c3dd0698fb7ff807fa33fd809ca073d43574aee4969d",
+      "published_sha256": "6004e869ced718b8aab104f2529c99418870ab63dc68fcd84101f84e990632bd"
+    },
+    {
+      "file": "evidence/red-integer-overflow.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "3587c2569cafbc0c6fd4c3dd0698fb7ff807fa33fd809ca073d43574aee4969d",
+      "published_sha256": "6004e869ced718b8aab104f2529c99418870ab63dc68fcd84101f84e990632bd"
+    },
+    {
+      "file": "evidence/red-java.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "39b9ac33ec325393d2113d045cd46ee360a40a92ab3601570419beb93682d1c6",
+      "published_sha256": "4fd9a1fb1bac525a0cc994c66a3cd24c56a5abdb795cb758917bf0fa6c252c03"
+    },
+    {
+      "file": "evidence/red-outage.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "0d4cd39c256566e375e30df86e60f0ec62950e77020c158283c537880b0e2158",
+      "published_sha256": "81425a20b9480991737c2cd2b734cd6334e1101b10dc42a9c86b3d4b60b8a1cb"
+    },
+    {
+      "file": "evidence/red-pagination.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "95eea70e940cb08223ff3e9b8f74857d744aff1dca22f8f1124cbb744b009452",
+      "published_sha256": "baf87974e8978b6b76663912272bf7b603912a55870f098c15df4d3f7f89fb34"
+    },
+    {
+      "file": "evidence/red-python.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "bfc65b897597ea3f0e6748ae137752908ad1463fe41567b3c8bb8e5d51ed52ae",
+      "published_sha256": "bac9b646e1f351286d3304742f27da212f3684ace3cb9f945f44e19afb0fd776"
+    },
+    {
+      "file": "evidence/red-reconnect.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "0f4cddbbc908ecfcc2aaea9147f3cafe63a28dbbb91f471ac1fca4dd5146516b",
+      "published_sha256": "b303eb34b443c48a31a38d9b2177ff11c3a0e1c6ed3056ff1ad8d35d1da8fdf4"
+    },
+    {
+      "file": "evidence/red-strict-json.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "d21db8a395531182220f9640d4c6a2e100f4eec51d214baad329004c6b9ad4e6",
+      "published_sha256": "7d9bcc282525b9ee934fd3f8027fd04ab1fb3eb75b5d4b39efa11ee41250cb52"
+    },
+    {
+      "file": "evidence/red-transport.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "b1c20fbe8fe2b6ac812f28f48ce99263fe2f7af5da4b5f86f5ca836eb3f71f28",
+      "published_sha256": "e991710d4a4034af6f0d79a0dc620d9e5ae003f93081c4a636743741ff3235ed"
+    },
+    {
+      "file": "evidence/transport-capacity-cli.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "c491ba448f77efc41dc033b976de58bfbd0cf95a5e14d591aaa21bbb0d1d3c3a",
+      "published_sha256": "3813fa285f34c46ec4483773015f34d08a3ec78dfa0caad7d0f63492e52428c6"
+    },
+    {
+      "file": "evidence/verification-driver.log",
+      "reason": "redact private home-directory prefix; historical success/failure/measurement fields unchanged",
+      "source_sha256": "c80ef91b914371e19546e566027bf914de1ba4282b9620ed0f517e370be5648d",
+      "published_sha256": "185ebfeda216e3f3203ae375bd97bdc1f23a146d1b29f0a2f397b1a8783f1ed1"
+    },
+    {
+      "file": ".gitignore",
+      "reason": "track accepted generated clients; continue excluding runtime/private credentials",
+      "source_sha256": "3ff6ca4ed3b652a8df9525c9f80acf8217b997675b36d944fb30785f95d7da7b",
+      "published_sha256": "907c1a6bb0f70562b3b02dd8bdab89221de4e1eaf742f28f4b8239f2b81d3d0d"
+    },
+    {
+      "file": "scripts/test-publication.sh",
+      "reason": "new bounded build/test command without benchmark or fixed incident rerun",
+      "source_sha256": null,
+      "published_sha256": "51108b7b6ca889ec1811e363958427eefbfca20bd6644553b9aabe806f66efbc"
+    },
+    {
+      "file": ".github/workflows/ci.yml",
+      "reason": "CI uses bounded build/contract tests instead of fixed incident/benchmark",
+      "source_sha256": "797bcb777a73aec0c617116102d375473b77ca78687a470bf75683fc55c80350",
+      "published_sha256": "708797ad9c66d6af6958f39441507bfb8ed11cc6d386a929db0afa4be044abbf"
+    },
+    {
+      "file": "evidence/README.md",
+      "reason": "new historical/publication boundary and credential/runtime exclusion note",
+      "source_sha256": null,
+      "published_sha256": "18566b100e7e13aba8849b963030a367fecd74bfd558842a9b2f7e86007b593b"
+    },
+    {
+      "file": "THIRD_PARTY_NOTICES.md",
+      "reason": "account for redistributed Gradle wrapper without inventing project license",
+      "source_sha256": null,
+      "published_sha256": "79e073f4f17ead285857afc9c7249fa769d3082e6d6ef3ac1bb222a0a91376ee"
+    },
+    {
+      "file": "evidence/publication-checks.txt",
+      "reason": "fresh bounded build/tests and actual simple CLI flow; local home paths redacted",
+      "source_sha256": null,
+      "source_logs": [
+        {
+          "name": "generate",
+          "source_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "java-build-test",
+          "source_log_sha256": "a8fd935bdc9bff03560f848889215012f68296a1e285c883db031a5d9208ef60"
+        },
+        {
+          "name": "python-tests",
+          "source_log_sha256": "1e67ce52cc6845bcc8fa612ce014ed3d6928ad3e8d1e6130c949271a680f8968"
+        },
+        {
+          "name": "pip-check",
+          "source_log_sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+        },
+        {
+          "name": "cli-smoke",
+          "source_log_sha256": "4d3e06ce4e9c88cb44c95ed75592a004b7dee45a8b38db3701415b5c7ea6aee9"
+        }
+      ],
+      "published_sha256": "dd7b47abbbfe7539661e6f28f14f56d1f31a8d5483854935a7194855a10aacd3"
+    }
+  ],
+  "excluded_source_files": {
+    ".runtime": "local runtime/build/environment symlink",
+    ".venv": "local runtime/build/environment symlink",
+    ".gradle": "local runtime/build/environment symlink",
+    "build": "local runtime/build/environment symlink",
+    ".pytest_cache/CACHEDIR.TAG": "runtime/cache/private PKI/database or unneeded profiling binary",
+    ".pytest_cache/README.md": "runtime/cache/private PKI/database or unneeded profiling binary",
+    ".pytest_cache/.gitignore": "runtime/cache/private PKI/database or unneeded profiling binary",
+    "scripts/__pycache__/serve_demo.cpython-312.pyc": "runtime/cache/private PKI/database or unneeded profiling binary",
+    "scripts/__pycache__/pki.cpython-312.pyc": "runtime/cache/private PKI/database or unneeded profiling binary",
+    "scripts/__pycache__/__init__.cpython-312.pyc": "runtime/cache/private PKI/database or unneeded profiling binary",
+    "scripts/__pycache__/experiment.cpython-312.pyc": "runtime/cache/private PKI/database or unneeded profiling binary",
+    "agent/__pycache__/operator.cpython-312.pyc": "runtime/cache/private PKI/database or unneeded profiling binary",
+    "agent/__pycache__/runtime.cpython-312.pyc": "runtime/cache/private PKI/database or unneeded profiling binary",
+    "agent/__pycache__/spool.cpython-312.pyc": "runtime/cache/private PKI/database or unneeded profiling binary",
+    "agent/__pycache__/__init__.cpython-312.pyc": "runtime/cache/private PKI/database or unneeded profiling binary",
+    "agent/__pycache__/__main__.cpython-312.pyc": "runtime/cache/private PKI/database or unneeded profiling binary",
+    "agent/generated/__pycache__/fleet_pb2_grpc.cpython-312.pyc": "runtime/cache/private PKI/database or unneeded profiling binary",
+    "agent/generated/__pycache__/fleet_pb2.cpython-312.pyc": "runtime/cache/private PKI/database or unneeded profiling binary",
+    "agent/generated/__pycache__/__init__.cpython-312.pyc": "runtime/cache/private PKI/database or unneeded profiling binary",
+    "tests/__pycache__/test_transport.cpython-312-pytest-8.4.2.pyc": "runtime/cache/private PKI/database or unneeded profiling binary",
+    "tests/__pycache__/test_agent.cpython-312-pytest-8.4.2.pyc": "runtime/cache/private PKI/database or unneeded profiling binary",
+    "tests/__pycache__/test_listing.cpython-312-pytest-8.4.2.pyc": "runtime/cache/private PKI/database or unneeded profiling binary",
+    "tests/__pycache__/test_spool.cpython-312.pyc": "runtime/cache/private PKI/database or unneeded profiling binary",
+    "tests/__pycache__/test_agent.cpython-312.pyc": "runtime/cache/private PKI/database or unneeded profiling binary",
+    "tests/__pycache__/test_spool.cpython-312-pytest-8.4.2.pyc": "runtime/cache/private PKI/database or unneeded profiling binary",
+    "tests/__pycache__/test_listing.cpython-312.pyc": "runtime/cache/private PKI/database or unneeded profiling binary",
+    "tests/__pycache__/test_transport.cpython-312.pyc": "runtime/cache/private PKI/database or unneeded profiling binary",
+    "tests/__pycache__/test_failure_drill.cpython-312-pytest-8.4.2.pyc": "runtime/cache/private PKI/database or unneeded profiling binary",
+    "tests/__pycache__/test_failure_drill.cpython-312.pyc": "runtime/cache/private PKI/database or unneeded profiling binary",
+    "tests/__pycache__/__init__.cpython-312.pyc": "runtime/cache/private PKI/database or unneeded profiling binary",
+    ".pytest_cache/v/cache/nodeids": "runtime/cache/private PKI/database or unneeded profiling binary",
+    ".pytest_cache/v/cache/lastfailed": "runtime/cache/private PKI/database or unneeded profiling binary",
+    "evidence/profile/control-plane.jfr": "runtime/cache/private PKI/database or unneeded profiling binary"
+  },
+  "core_source_tests_proto_generated_clients": "byte-preserved",
+  "project_license_added": false
+}

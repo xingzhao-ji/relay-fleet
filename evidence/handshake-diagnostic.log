@@ -1,0 +1,27 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1792779728.907618 3441473 fork_posix.cc:71] Other threads are currently calling into gRPC, skipping fork() handlers
+I0000 00:00:1792779728.915828 3441473 fork_posix.cc:71] Other threads are currently calling into gRPC, skipping fork() handlers
+I0000 00:00:1792779728.928961 3441473 fork_posix.cc:71] Other threads are currently calling into gRPC, skipping fork() handlers
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "$HOME/Desktop/job-apps/projects/relay-fleet/scripts/experiment.py", line 203, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "$HOME/Desktop/job-apps/projects/relay-fleet/scripts/experiment.py", line 201, in main
+    asyncio.run(drill(directory,args.output))
+  File "/opt/homebrew/Cellar/python@3.12/3.12.12_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.12_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.12_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "$HOME/Desktop/job-apps/projects/relay-fleet/scripts/experiment.py", line 100, in drill
+    await until(lambda:all(query_db(directory/f'{n}.db','SELECT count(*) FROM spool')[0][0]==16 for n in ['sim-a','sim-b','south-a']))
+  File "$HOME/Desktop/job-apps/projects/relay-fleet/scripts/experiment.py", line 66, in until
+    assert time.monotonic()-start<timeout,'timed out awaiting measured state'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: timed out awaiting measured state

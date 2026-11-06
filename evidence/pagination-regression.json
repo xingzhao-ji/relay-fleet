@@ -1,0 +1,38 @@
+{
+  "registered": 1025,
+  "page_counts": [
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    25
+  ],
+  "response_bytes": [
+    430722,
+    430722,
+    430722,
+    430722,
+    430722,
+    430722,
+    430722,
+    430722,
+    430722,
+    430722,
+    107625
+  ],
+  "maximum_response_bytes": 430722,
+  "client_receive_limit_unchanged": 4194304,
+  "cursor_rejections": 9,
+  "invalid_page_sizes": 3,
+  "legacy_empty_rejected": true,
+  "cursor_survived_server_restart": true,
+  "cli_devices": 1025,
+  "cli_page_size": 37,
+  "passed": true
+}

@@ -1,0 +1,16 @@
+[1.148s][info][jfr,startup] Started recording 1. No limit specified, using maxsize=250MB as default.
+[1.148s][info][jfr,startup] 
+[1.148s][info][jfr,startup] Use jcmd 24120 JFR.dump name=1 to copy recording data to file.
+{"event":"ready","port":54311,"transport":"mTLS","simulation":true}
+{"event":"auth_rejected","status":"UNAUTHENTICATED"}
+{"event":"committed","tenant":"north","device":"sim-a","ack":0,"accepted":0,"duplicates":0}
+{"event":"committed","tenant":"north","device":"sim-b","ack":0,"accepted":0,"duplicates":0}
+{"event":"committed","tenant":"south","device":"sim-a","ack":0,"accepted":0,"duplicates":0}
+{"event":"committed","tenant":"north","device":"sim-a","ack":9,"accepted":9,"duplicates":0}
+{"event":"committed","tenant":"north","device":"sim-b","ack":8,"accepted":8,"duplicates":0}
+{"event":"committed","tenant":"south","device":"sim-a","ack":7,"accepted":7,"duplicates":0}
+{"event":"committed","tenant":"north","device":"sim-a","ack":11,"accepted":2,"duplicates":0}
+{"event":"committed","tenant":"north","device":"sim-b","ack":11,"accepted":3,"duplicates":0}
+{"event":"committed","tenant":"south","device":"sim-a","ack":9,"accepted":2,"duplicates":0}
+{"event":"committed","tenant":"north","device":"sim-a","ack":13,"accepted":2,"duplicates":0}
+{"event":"committed","tenant":"north","device":"sim-b","ack":13,"accepted":2,"duplicates":0}

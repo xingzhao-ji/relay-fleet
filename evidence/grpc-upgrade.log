@@ -1,0 +1,40 @@
+Collecting grpcio==1.84.1 (from -r requirements.txt (line 1))
+  Using cached grpcio-1.84.1-cp312-cp312-macosx_11_0_universal2.whl.metadata (3.8 kB)
+Collecting grpcio-tools==1.84.1 (from -r requirements.txt (line 2))
+  Using cached grpcio_tools-1.84.1-cp312-cp312-macosx_11_0_universal2.whl.metadata (5.3 kB)
+Collecting protobuf==7.36.2 (from -r requirements.txt (line 3))
+  Using cached protobuf-7.36.2-cp310-abi3-macosx_10_9_universal2.whl.metadata (595 bytes)
+Requirement already satisfied: pytest==8.4.2 in ./.venv/lib/python3.12/site-packages (from -r requirements.txt (line 4)) (8.4.2)
+Requirement already satisfied: pytest-asyncio==1.2.0 in ./.venv/lib/python3.12/site-packages (from -r requirements.txt (line 5)) (1.2.0)
+Requirement already satisfied: cryptography==46.0.3 in ./.venv/lib/python3.12/site-packages (from -r requirements.txt (line 6)) (46.0.3)
+Requirement already satisfied: typing-extensions~=4.12 in ./.venv/lib/python3.12/site-packages (from grpcio==1.84.1->-r requirements.txt (line 1)) (4.16.0)
+Requirement already satisfied: setuptools>=77.0.1 in ./.venv/lib/python3.12/site-packages (from grpcio-tools==1.84.1->-r requirements.txt (line 2)) (84.2.1)
+Requirement already satisfied: iniconfig>=1 in ./.venv/lib/python3.12/site-packages (from pytest==8.4.2->-r requirements.txt (line 4)) (2.3.1)
+Requirement already satisfied: packaging>=20 in ./.venv/lib/python3.12/site-packages (from pytest==8.4.2->-r requirements.txt (line 4)) (26.3)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.12/site-packages (from pytest==8.4.2->-r requirements.txt (line 4)) (1.7.0)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.12/site-packages (from pytest==8.4.2->-r requirements.txt (line 4)) (2.21.0)
+Requirement already satisfied: cffi>=2.0.0 in ./.venv/lib/python3.12/site-packages (from cryptography==46.0.3->-r requirements.txt (line 6)) (2.1.1)
+Requirement already satisfied: pycparser in ./.venv/lib/python3.12/site-packages (from cffi>=2.0.0->cryptography==46.0.3->-r requirements.txt (line 6)) (3.12)
+Downloading grpcio-1.84.1-cp312-cp312-macosx_11_0_universal2.whl (12.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 30.1 MB/s  0:00:00
+Downloading grpcio_tools-1.84.1-cp312-cp312-macosx_11_0_universal2.whl (6.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.0/6.0 MB 38.7 MB/s  0:00:00
+Downloading protobuf-7.36.2-cp310-abi3-macosx_10_9_universal2.whl (456 kB)
+Installing collected packages: protobuf, grpcio, grpcio-tools
+  Attempting uninstall: protobuf
+    Found existing installation: protobuf 6.33.0
+    Uninstalling protobuf-6.33.0:
+      Successfully uninstalled protobuf-6.33.0
+  Attempting uninstall: grpcio
+    Found existing installation: grpcio 1.76.0
+    Uninstalling grpcio-1.76.0:
+      Successfully uninstalled grpcio-1.76.0
+  Attempting uninstall: grpcio-tools
+    Found existing installation: grpcio-tools 1.76.0
+    Uninstalling grpcio-tools-1.76.0:
+      Successfully uninstalled grpcio-tools-1.76.0
+
+Successfully installed grpcio-1.84.1 grpcio-tools-1.84.1 protobuf-7.36.2
+
+[notice] A new release of pip is available: 25.3 -> 26.2.2
+[notice] To update, run: $HOME/Desktop/job-apps/projects/relay-fleet/.venv/bin/python3.12 -m pip install --upgrade pip

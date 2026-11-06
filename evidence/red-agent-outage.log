@@ -1,0 +1,44 @@
+{"time_ms": 1792779533317, "event": "config_applied", "device": "sim-a", "version": 1}
+{"time_ms": 1792779533317, "event": "ack", "device": "sim-a", "through": 0, "depth": 3}
+{"time_ms": 1792779533373, "event": "ack", "device": "sim-a", "through": 8, "depth": 0}
+{"time_ms": 1792779533399, "event": "ack", "device": "sim-a", "through": 10, "depth": 1}
+{"time_ms": 1792779533423, "event": "ack", "device": "sim-a", "through": 12, "depth": 1}
+{"time_ms": 1792779533445, "event": "agent_summary", "device": "sim-a", "reconnects": 0, "backpressure": 0, "accepted": 12, "duplicates": 0, "max_depth": 8, "simulated": true, "acked": 12, "remaining": 3, "applied_version": 1}
+  + Exception Group Traceback (most recent call last):
+  |   File "<frozen runpy>", line 198, in _run_module_as_main
+  |   File "<frozen runpy>", line 88, in _run_code
+  |   File "$HOME/Desktop/job-apps/projects/relay-fleet/agent/__main__.py", line 24, in <module>
+  |     if __name__=='__main__':main()
+  |                             ^^^^^^
+  |   File "$HOME/Desktop/job-apps/projects/relay-fleet/agent/__main__.py", line 22, in main
+  |     asyncio.run(run())
+  |   File "/opt/homebrew/Cellar/python@3.12/3.12.12_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 195, in run
+  |     return runner.run(main)
+  |            ^^^^^^^^^^^^^^^^
+  |   File "/opt/homebrew/Cellar/python@3.12/3.12.12_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+  |     return self._loop.run_until_complete(task)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/opt/homebrew/Cellar/python@3.12/3.12.12_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+  |     return future.result()
+  |            ^^^^^^^^^^^^^^^
+  |   File "$HOME/Desktop/job-apps/projects/relay-fleet/agent/__main__.py", line 19, in run
+  |     await run_agent(address=args.address,pki=args.pki,identity=args.identity,device=args.device,spool_path=args.spool,
+  |   File "$HOME/Desktop/job-apps/projects/relay-fleet/agent/runtime.py", line 85, in run_agent
+  |     async with asyncio.TaskGroup() as group:
+  |                ^^^^^^^^^^^^^^^^^^^
+  |   File "/opt/homebrew/Cellar/python@3.12/3.12.12_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/taskgroups.py", line 71, in __aexit__
+  |     return await self._aexit(et, exc)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/opt/homebrew/Cellar/python@3.12/3.12.12_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/taskgroups.py", line 164, in _aexit
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "$HOME/Desktop/job-apps/projects/relay-fleet/agent/runtime.py", line 64, in send
+    |     await call.write(pb.DeviceFrame(device_id=device,schema_version=1,samples=[pb.Sample(**s) for s in batch],applied_version=version,applied_sha256=sha))
+    |   File "$HOME/Desktop/job-apps/projects/relay-fleet/.venv/lib/python3.12/site-packages/grpc/aio/_call.py", line 522, in write
+    |     await self._write(request)
+    |   File "$HOME/Desktop/job-apps/projects/relay-fleet/.venv/lib/python3.12/site-packages/grpc/aio/_call.py", line 485, in _write
+    |     raise asyncio.InvalidStateError(_RPC_ALREADY_FINISHED_DETAILS)
+    | asyncio.exceptions.InvalidStateError: RPC already finished.
+    +------------------------------------

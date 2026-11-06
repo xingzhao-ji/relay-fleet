@@ -1,0 +1,63 @@
+Publication checks, 2026-11-06. Java 21; fresh Python 3.12 environment.
+Existing Gradle distribution/dependency cache reused offline.
+Historical fixed incident, pagination evidence run and benchmark were not rerun.
+
+--- generate ---
+
+--- java-build-test ---
+Picked up JAVA_TOOL_OPTIONS: -XX:ActiveProcessorCount=2 -Xmx512m -XX:ParallelGCThreads=2 -XX:ConcGCThreads=1
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.4/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :protobufDummy UP-TO-DATE
+> Task :extractIncludeProto
+> Task :extractProto
+> Task :generateProto
+> Task :compileJava
+> Task :processResources
+> Task :classes
+> Task :jar
+> Task :extractIncludeTestProto
+> Task :extractTestProto
+> Task :generateTestProto NO-SOURCE
+> Task :compileTestJava
+> Task :processTestResources NO-SOURCE
+> Task :testClasses
+
+> Task :test
+Picked up JAVA_TOOL_OPTIONS: -XX:ActiveProcessorCount=2 -Xmx512m -XX:ParallelGCThreads=2 -XX:ConcGCThreads=1
+
+StoreTest > configurationMustBeStrictJsonForPythonInteroperability() PASSED
+
+StoreTest > configCompareAndSwapAndAcknowledgmentNeverRegress() PASSED
+
+StoreTest > unusableConfigCannotBecomeDesiredState() PASSED
+
+StoreTest > concurrentRetriesRemainUnique() PASSED
+
+StoreTest > revokedDeviceCannotContinueExistingSession() PASSED
+
+StoreTest > conflictingSequenceAndGapHaveNoEffect() PASSED
+
+StoreTest > batchRollsBackBeforeAckWhenLaterSampleConflicts() PASSED
+
+StoreTest > certificateBoundIdentityRejectsSpoofAndTenantCannotQuery() PASSED
+
+StoreTest > oversizeAndUnsupportedProtocolRejectedBeforeWrite() PASSED
+
+StoreTest > replayHasOneEffectAndSurvivesReopen() PASSED
+
+> Task :startScripts
+> Task :installDist
+
+BUILD SUCCESSFUL in 7s
+12 actionable tasks: 12 executed
+
+--- python-tests ---
+.........                                                                [100%]
+9 passed in 11.49s
+
+--- pip-check ---
+No broken requirements found.
+
+--- cli-smoke ---
+{"status": "passed", "synthetic_samples": 8, "cli_flow": ["register", "config", "agent", "list", "query", "revoke"], "fresh_disposable_pki": true, "fixed_incident_or_benchmark_run": false}

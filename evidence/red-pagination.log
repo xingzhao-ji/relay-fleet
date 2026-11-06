@@ -1,0 +1,137 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.12, pytest-8.4.2, pluggy-1.7.0 -- $HOME/.cache/job-apps-runtime/relay-fleet/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: $HOME/Desktop/job-apps/projects/relay-fleet
+plugins: asyncio-1.2.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests/test_listing.py::test_maximum_config_fleet_is_complete_bounded_and_tenant_scoped FAILED [100%]
+
+=================================== FAILURES ===================================
+_______ test_maximum_config_fleet_is_complete_bounded_and_tenant_scoped ________
+
+tmp_path = PosixPath('/private/var/folders/qz/n37ngw_n02l8fx3wjvb805_00000gq/T/pytest-of-xingzhaoji/pytest-42/test_maximum_config_fleet_is_c0')
+
+    def test_maximum_config_fleet_is_complete_bounded_and_tenant_scoped(tmp_path):
+        fleet=RunningFleet(tmp_path)
+        tenant='n'*64
+        subprocess.run([str(fleet.binary),'bootstrap',str(fleet.db),fleet.fingerprints['unregistered'],tenant],check=True,capture_output=True)
+        fleet.start()
+        ids=[f'd{i:04d}'+'x'*59 for i in range(1025)]
+        prefix='{"sample_interval_ms":10,"padding":"'
+        body=prefix+'x'*(4096-len(prefix)-2)+'"}'
+        assert len(body.encode())==4096 and all(len(name)==64 for name in ids)
+        observations={}
+    
+        async def run():
+            await fleet.ready()
+            async with fleet.channel('unregistered') as c, fleet.channel('operator-north') as other:
+                stub=rpc.FleetStub(c);north=rpc.FleetStub(other)
+                await north.Register(pb.RegisterRequest(device_id=ids[0],certificate_sha256=fleet.fingerprints['sim-a']),timeout=3)
+                for name in ids:
+                    await stub.Register(pb.RegisterRequest(device_id=name,certificate_sha256=hashlib.sha256((tenant+name).encode()).hexdigest()),timeout=3)
+                    await stub.SetDesired(pb.DesiredRequest(device_id=name,expected_version=0,json=body),timeout=3)
+                seen=[];token='';page_sizes=[];response_bytes=[];first_token=None
+                while True:
+                    page=await stub.ListDevices(request(100,token),timeout=3)
+                    assert len(page.devices)<=100
+                    assert page.ByteSize()<=512*1024
+                    assert all(d.tenant==tenant and len(d.desired.json.encode())==4096 for d in page.devices)
+                    seen.extend(d.device_id for d in page.devices)
+                    page_sizes.append(len(page.devices));response_bytes.append(page.ByteSize())
+                    token=page.next_page_token
+                    if first_token is None:first_token=token
+                    if not token:break
+                assert seen==ids and len(set(seen))==1025
+                assert page_sizes==[100]*10+[25]
+                # Cursor is independent of page size but scoped to the authenticated tenant.
+                resumed=await stub.ListDevices(request(17,first_token),timeout=3)
+                assert [d.device_id for d in resumed.devices]==ids[100:117]
+                for size in [0,101,2**32-1]:
+                    with pytest.raises(grpc.aio.AioRpcError) as err:
+                        await stub.ListDevices(request(size),timeout=3)
+                    assert err.value.code()==grpc.StatusCode.INVALID_ARGUMENT
+                malformed=['!', 'a'*257, 'v1..', first_token+'=', ' '+first_token,
+                           'v2.'+first_token.split('.',1)[1], first_token.rsplit('.',1)[0]+'.'+'A'*43]
+                for bad in malformed:
+                    with pytest.raises(grpc.aio.AioRpcError) as err:
+                        await stub.ListDevices(request(100,bad),timeout=3)
+                    assert err.value.code()==grpc.StatusCode.INVALID_ARGUMENT
+                with pytest.raises(grpc.aio.AioRpcError) as err:
+                    await north.ListDevices(request(100,first_token),timeout=3)
+                assert err.value.code()==grpc.StatusCode.INVALID_ARGUMENT
+                own=await north.ListDevices(request(100),timeout=3)
+                assert [d.device_id for d in own.devices]==[ids[0]] and not own.next_page_token
+                # Empty legacy request decodes with page_size=0 and must fail, not truncate.
+                legacy=c.unary_unary('/relay.v1.Fleet/ListDevices',request_serializer=pb.Empty.SerializeToString,response_deserializer=pb.Devices.FromString)
+                with pytest.raises(grpc.aio.AioRpcError) as err:await legacy(pb.Empty(),timeout=3)
+                assert err.value.code()==grpc.StatusCode.INVALID_ARGUMENT
+                observations.update(registered=1025,page_counts=page_sizes,response_bytes=response_bytes,
+                                    maximum_response_bytes=max(response_bytes),client_receive_limit_unchanged=4*1024*1024,
+                                    cursor_rejections=len(malformed)+1,invalid_page_sizes=3,legacy_empty_rejected=True)
+            fleet.stop();fleet.start();await fleet.ready()
+            async with fleet.channel('unregistered') as c:
+                resumed=await rpc.FleetStub(c).ListDevices(request(17,first_token),timeout=3)
+                assert [d.device_id for d in resumed.devices]==ids[100:117]
+            observations['cursor_survived_server_restart']=True
+    
+        try:
+>           asyncio.run(run())
+
+tests/test_listing.py:83: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/homebrew/Cellar/python@3.12/3.12.12_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.12/3.12.12_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.12/3.12.12_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+tests/test_listing.py:40: in run
+    page=await stub.ListDevices(request(100,token),timeout=3)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_AioCall of RPC that terminated with:
+	status = Stream removed (CLIENT: Received message larger than max (4305000 vs....g_error_string = "RESOURCE_EXHAUSTED:Stream removed (CLIENT: Received message larger than max (4305000 vs. 4194304))"
+>
+
+    def __await__(self) -> Generator[Any, None, ResponseType]:
+        """Wait till the ongoing RPC request finishes."""
+        try:
+            response = yield from self._call_response
+        except asyncio.CancelledError:
+            # Even if we caught all other CancelledError, there is still
+            # this corner case. If the application cancels immediately after
+            # the Call object is created, we will observe this
+            # `CancelledError`.
+            if not self.cancelled():
+                self.cancel()
+            raise
+    
+        # NOTE(lidiz) If we raise RpcError in the task, and users doesn't
+        # 'await' on it. AsyncIO will log 'Task exception was never retrieved'.
+        # Instead, if we move the exception raising here, the spam stops.
+        # Unfortunately, there can only be one 'yield from' in '__await__'. So,
+        # we need to access the private instance variable.
+        if response is cygrpc.EOF:
+            if self._cython_call.is_locally_cancelled():
+                raise asyncio.CancelledError()
+            else:
+>               raise _create_rpc_error(
+                    self._cython_call._initial_metadata,
+                    self._cython_call._status,
+                )
+E               grpc.aio._call.AioRpcError: <AioRpcError of RPC that terminated with:
+E               	status = StatusCode.RESOURCE_EXHAUSTED
+E               	details = "Stream removed (CLIENT: Received message larger than max (4305000 vs. 4194304))"
+E               	debug_error_string = "RESOURCE_EXHAUSTED:Stream removed (CLIENT: Received message larger than max (4305000 vs. 4194304))"
+E               >
+
+../../../../.cache/job-apps-runtime/relay-fleet/.venv/lib/python3.12/site-packages/grpc/aio/_call.py:333: AioRpcError
+=========================== short test summary info ============================
+FAILED tests/test_listing.py::test_maximum_config_fleet_is_complete_bounded_and_tenant_scoped
+============================== 1 failed in 8.69s ===============================

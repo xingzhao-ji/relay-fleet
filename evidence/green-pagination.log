@@ -1,0 +1,11 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.12, pytest-8.4.2, pluggy-1.7.0 -- $HOME/.cache/job-apps-runtime/relay-fleet/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: $HOME/Desktop/job-apps/projects/relay-fleet
+plugins: asyncio-1.2.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests/test_listing.py::test_maximum_config_fleet_is_complete_bounded_and_tenant_scoped PASSED [100%]
+
+============================== 1 passed in 16.90s ==============================

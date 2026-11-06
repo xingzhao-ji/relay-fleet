@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-10-23T18:46:43.051100+00:00",
+  "algorithm": "sha256",
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "797bcb777a73aec0c617116102d375473b77ca78687a470bf75683fc55c80350",
+      "bytes": 740
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "3ff6ca4ed3b652a8df9525c9f80acf8217b997675b36d944fb30785f95d7da7b",
+      "bytes": 115
+    },
+    {
+      "path": "README.md",
+      "sha256": "3faaa95033362fb946f58f336c40e6a64b53563dddbe84db9e0a0193e0b0cfd9",
+      "bytes": 13209
+    },
+    {
+      "path": "agent/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "agent/__main__.py",
+      "sha256": "35d34ecb29ada9d7de7fb77d3224aa14ed389bcc625849d0aaa1553b29f79f30",
+      "bytes": 1369
+    },
+    {
+      "path": "agent/generated/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "agent/generated/fleet_pb2.py",
+      "sha256": "45f7d7bed1a00bfba5e2de31028a371c114bb0dc1daf81b3ccf0bdd2ab385785",
+      "bytes": 5095
+    },
+    {
+      "path": "agent/generated/fleet_pb2_grpc.py",
+      "sha256": "1109d27f5e8743d3b61d9c5c9baee76afae368b124b423b1db942825300c8ff0",
+      "bytes": 11816
+    },
+    {
+      "path": "agent/operator.py",
+      "sha256": "92784750463d18ff6c0644ac439052adaa88ddd9f4964f7d616c0e03218b0988",
+      "bytes": 3109
+    },
+    {
+      "path": "agent/runtime.py",
+      "sha256": "4a7304a2a0d2f042e431640784f5b404b34578e5bc9b6c033be0305cb2485ae6",
+      "bytes": 5645
+    },
+    {
+      "path": "agent/spool.py",
+      "sha256": "dae2f1068de32af5ab887bfb5d588b2fd3f6a7dbc21e8e0ce1bf7f52e623eab8",
+      "bytes": 4128
+    },
+    {
+      "path": "build.gradle",
+      "sha256": "beffbfff8feda4e76eacecc14c7021014fe9218462ab8c3dceee191d70ec9912",
+      "bytes": 1326
+    },
+    {
+      "path": "docs/runbook.md",
+      "sha256": "0bb97a7655dca064210688793f7eb6e348e412b394d6f27c48e4d183f1c74f94",
+      "bytes": 2302
+    },
+    {
+      "path": "docs/validation.md",
+      "sha256": "70c4d81748560a01c2834d1276b01dc95dcaa92733ed9844bdbfe3e9ba671fda",
+      "bytes": 5553
+    },
+    {
+      "path": "gradle.lockfile",
+      "sha256": "11cc9c5c13fc4f89d6feba21c68d6f433b2238f7ec6f15e9a69bec5fbf3f3c84",
+      "bytes": 4660
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.jar",
+      "sha256": "7d3a4ac4de1c32b59bc6a4eb8ecb8e612ccd0cf1ae1e99f66902da64df296172",
+      "bytes": 43764
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.properties",
+      "sha256": "258e493d81184b05a0466604eb41650ddd521e659733e91b6f195b5003d041ab",
+      "bytes": 340
+    },
+    {
+      "path": "gradlew",
+      "sha256": "b187b4c52e749f5760afdd6fadc31b2a98ad35fb249bf0dff03b72650f320409",
+      "bytes": 8733
+    },
+    {
+      "path": "gradlew.bat",
+      "sha256": "1d297e00bd21de3ace22b4d7f2de1f9dfa858883d66bbf7c1ccbecccec8f4f3b",
+      "bytes": 2937
+    },
+    {
+      "path": "proto/fleet.proto",
+      "sha256": "80b150177e0b40c6f960e26578e9d53e7343e7cb357395abf92f51b658d4306c",
+      "bytes": 2190
+    },
+    {
+      "path": "requirements.lock",
+      "sha256": "cc5c20b463a7db997278190fe97dcd84a504c80ff4725059f9010cebb071f735",
+      "bytes": 247
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "d38fcf5d7c124a0dde476fa29dce6fce4618f1f221582169ce7b62e2e2cdb33c",
+      "bytes": 110
+    },
+    {
+      "path": "scripts/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "scripts/experiment.py",
+      "sha256": "29b49f5905d5bd676bf095f9f32c90f4d14d4a2488a422e20984062f3df580f7",
+      "bytes": 16339
+    },
+    {
+      "path": "scripts/generate.sh",
+      "sha256": "bc6b9d479c80870692b0eb49564f38f0873171de9f1eb58e3542ed6e4be83ea4",
+      "bytes": 555
+    },
+    {
+      "path": "scripts/pki.py",
+      "sha256": "3e1492279aedb1b1f1eb10ccdb29b502e0354ceed946ea7b7fe2e446a22e29ef",
+      "bytes": 2568
+    },
+    {
+      "path": "scripts/serve_demo.py",
+      "sha256": "02c1cde39a0e9f4374a989ab87d4517707307efbde0a31c44089b3fbb6942fbc",
+      "bytes": 1165
+    },
+    {
+      "path": "scripts/setup.sh",
+      "sha256": "a496213c28c6577b60646d5ac1e7a1ac9654062b415db735b35d64fea9bf7758",
+      "bytes": 214
+    },
+    {
+      "path": "scripts/verify.sh",
+      "sha256": "74371a604fb6ae9d579a4856ddca161e939a43f319df3592557ac65f89cfec2e",
+      "bytes": 419
+    },
+    {
+      "path": "settings.gradle",
+      "sha256": "0aaea44b4f3ac1d2ad2f6854b2cf13e4e7ef753fad8df3cf28243c5578faf3ba",
+      "bytes": 33
+    },
+    {
+      "path": "src/main/java/relay/FleetService.java",
+      "sha256": "09bca8de55839af5dfd23d8ce9cd48839c8ec246e6e220dc570792ce6f0bfbcf",
+      "bytes": 4745
+    },
+    {
+      "path": "src/main/java/relay/IdentityInterceptor.java",
+      "sha256": "0047328a5e8549ccb96c825bfdb8b5216dbd33ab527bb31d0fb7b692b9338b2e",
+      "bytes": 1282
+    },
+    {
+      "path": "src/main/java/relay/Main.java",
+      "sha256": "7a34112bee007746796266e54317ce3cb886ba1cb7f986c10e2c451232824938",
+      "bytes": 2215
+    },
+    {
+      "path": "src/main/java/relay/PageCursor.java",
+      "sha256": "65b5fd00aeb12692c640fb6128b8a29444fd95c3349591d8e79056b08dd38dff",
+      "bytes": 2394
+    },
+    {
+      "path": "src/main/java/relay/Store.java",
+      "sha256": "efc52c1ec5fcd0fee928a0f2cce21113730d28fff4accef3a7f0ad66dbe70238",
+      "bytes": 14507
+    },
+    {
+      "path": "src/test/java/relay/StoreTest.java",
+      "sha256": "9fdd046b5a36b8429413b910eef27cc069ed33ad5f1b7d7328c775b699985927",
+      "bytes": 5451
+    },
+    {
+      "path": "tests/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tests/test_agent.py",
+      "sha256": "1d4ff59550c22fb4f225acb8534f00e488de6a12bbf335c40b0e293f6c3ee4e5",
+      "bytes": 1274
+    },
+    {
+      "path": "tests/test_failure_drill.py",
+      "sha256": "2614b4c0d3a28aef4cd2c219ce2a127561dc3fc1db9b2640df48026eb128a4a3",
+      "bytes": 295
+    },
+    {
+      "path": "tests/test_listing.py",
+      "sha256": "8729e6f3e4c211dcf8615de4cee0afd93412137b07ff91497da927d823b7328b",
+      "bytes": 5514
+    },
+    {
+      "path": "tests/test_spool.py",
+      "sha256": "5564d63b8c9e3f8b4c3472c53840d41d49c1351742dbcba700c936cf6bfc3564",
+      "bytes": 1788
+    },
+    {
+      "path": "tests/test_transport.py",
+      "sha256": "703bc514222d016c11278f921789f175d2762afd50f701328bfffc949555e6f8",
+      "bytes": 7031
+    }
+  ]
+}

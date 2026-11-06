@@ -1,0 +1,27 @@
+{
+  "reviewed_utc": "2026-10-23T18:38:49.443665+00:00",
+  "reviewer": "independent automated employer/code reviewer",
+  "verification_command": "bash scripts/verify.sh",
+  "exit_code": 0,
+  "java_tests_passed": 10,
+  "python_tests_passed": 10,
+  "python_duration_seconds": 23.4,
+  "failure_experiment_checks": 9,
+  "recovered_samples": 480,
+  "performance": {
+    "method": "100 sequential 32-sample batches on one warmed mTLS bidi stream; SQLite WAL synchronous FULL; local loopback; no disk fsync interception; includes commit + ACK, excludes PKI/startup/warmup",
+    "samples": 3200,
+    "batches": 100,
+    "elapsed_s": 0.3268251249974128,
+    "samples_per_s": 9791.16890118326,
+    "batch_p50_ms": 2.3622920125490054,
+    "batch_p95_ms": 7.01566701172851,
+    "batch_p99_ms": 11.82899999548681,
+    "not_a_scale_claim": true
+  },
+  "manifest_entries": 40,
+  "source_hash_mismatches": [],
+  "status": "changes_requested",
+  "finding": "unpaginated operator list exceeds default receive limit and silently truncates",
+  "original_evidence_preserved": "~/.cache/job-apps-runtime/relay-fleet/review-before"
+}

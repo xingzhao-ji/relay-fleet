@@ -1,0 +1,61 @@
+syntax = "proto3";
+package relay.v1;
+option java_package = "relay.proto";
+option java_multiple_files = true;
+
+// v1: additive changes only; field numbers are never reused. Application schema
+// negotiation is explicit; unknown protobuf fields remain wire compatible.
+service Fleet {
+  rpc Sync(stream DeviceFrame) returns (stream ServerFrame);
+  rpc Register(RegisterRequest) returns (Device);
+  rpc SetDesired(DesiredRequest) returns (Device);
+  // Callers must follow next_page_token until empty. Legacy Empty requests are
+  // rejected (page_size=0), rather than silently receiving an incomplete list.
+  rpc ListDevices(ListDevicesRequest) returns (Devices);
+  rpc QueryTelemetry(QueryRequest) returns (Samples);
+  rpc Revoke(DeviceId) returns (Device);
+}
+message Empty {}
+message DeviceId { string device_id = 1; }
+message Sample { uint64 sequence = 1; int64 observed_at_ms = 2; string reading_json = 3; }
+message Config { uint64 version = 1; string json = 2; string sha256 = 3; }
+message DeviceFrame {
+  string device_id = 1;
+  repeated Sample samples = 2;
+  uint64 applied_version = 3;
+  string applied_sha256 = 4;
+  uint32 schema_version = 5;
+  reserved 6;
+}
+message ServerFrame {
+  uint64 ack_through = 1;
+  Config desired = 2;
+  uint32 accepted = 3;
+  uint32 duplicates = 4;
+  int64 server_time_ms = 5;
+}
+message RegisterRequest { string device_id = 1; string certificate_sha256 = 2; }
+message DesiredRequest { string device_id = 1; uint64 expected_version = 2; string json = 3; }
+message Device {
+  string tenant = 1;
+  string device_id = 2;
+  uint64 last_sequence = 3;
+  Config desired = 4;
+  uint64 applied_version = 5;
+  int64 last_seen_ms = 6;
+  int64 clock_skew_ms = 7;
+  uint64 telemetry_count = 8;
+  bool revoked = 9;
+}
+message ListDevicesRequest {
+  // Required, 1..100. There is deliberately no implicit first-page default.
+  uint32 page_size = 1;
+  // Opaque tenant-bound continuation; unchanged when changing page_size.
+  string page_token = 2;
+}
+message Devices {
+  repeated Device devices = 1;
+  string next_page_token = 2;
+}
+message QueryRequest { string device_id = 1; uint64 after_sequence = 2; uint32 limit = 3; }
+message Samples { repeated Sample samples = 1; }

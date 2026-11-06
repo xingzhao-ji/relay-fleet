@@ -1,0 +1,48 @@
+{
+  "reviewed_utc": "2026-10-23T18:53:04.337450+00:00",
+  "status": "accepted_bounded_scope",
+  "full_verification_exit": 0,
+  "java_tests": 10,
+  "python_tests": 11,
+  "python_duration_seconds": 32.81,
+  "experiment_checks": 9,
+  "recovered_samples": 480,
+  "source_manifest_entries": 42,
+  "source_hash_mismatches": [],
+  "independent_original_workload_recheck": {
+    "config_and_telemetry_atomicity": {
+      "passed": true,
+      "invalid_ack_inserted_rows": 0,
+      "valid_retry_accepted": 1
+    },
+    "unsigned_sequence_overflow": "INVALID_ARGUMENT",
+    "default_client_large_list": {
+      "status": "OK",
+      "registered": 1002,
+      "returned": 1002,
+      "unique": 1002,
+      "page_size": 73,
+      "page_counts": [
+        73,
+        73,
+        73,
+        73,
+        73,
+        73,
+        73,
+        73,
+        73,
+        73,
+        73,
+        73,
+        73,
+        53
+      ],
+      "maximum_response_bytes": 310102,
+      "default_4mib_limit_unchanged": true
+    },
+    "legacy_request": "INVALID_ARGUMENT",
+    "probe_duration_s": 2.1887793749920093
+  },
+  "limitations": "No hostedCI, physicalhardware, HA, productionfleet or applicantmastery claim."
+}

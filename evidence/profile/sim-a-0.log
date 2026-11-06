@@ -1,0 +1,10 @@
+I1023 11:30:42.500496 3465102 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(15, generation: 1)
+I1023 11:30:42.500611 3465102 ev_poll_posix.cc:587] FD from fork parent still in poll list: fd(14, generation: 1)
+{"time_ms": 1792780242889, "event": "config_applied", "device": "sim-a", "version": 1}
+{"time_ms": 1792780242894, "event": "ack", "device": "sim-a", "through": 0, "depth": 4}
+{"time_ms": 1792780242952, "event": "ack", "device": "sim-a", "through": 9, "depth": 0}
+{"time_ms": 1792780242979, "event": "ack", "device": "sim-a", "through": 11, "depth": 0}
+{"time_ms": 1792780243005, "event": "ack", "device": "sim-a", "through": 13, "depth": 1}
+{"time_ms": 1792780243027, "event": "reconnect", "device": "sim-a", "status": "UNAVAILABLE", "details": "Stream removed (Socket closed)", "depth": 3}
+{"time_ms": 1792780243081, "event": "reconnect", "device": "sim-a", "status": "UNAVAILABLE", "details": "failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:54337: Handshake read failed (recvmsg:Connection reset by peer (54))", "depth": 7}
+{"time_ms": 1792780243190, "event": "sampling_paused", "device": "sim-a", "reason": "spool_full", "depth": 16}

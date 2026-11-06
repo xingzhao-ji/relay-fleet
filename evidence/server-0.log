@@ -1,0 +1,14 @@
+{"event":"ready","port":62691,"transport":"mTLS","simulation":true}
+{"event":"auth_rejected","status":"UNAUTHENTICATED"}
+{"event":"committed","tenant":"north","device":"sim-a","ack":0,"accepted":0,"duplicates":0}
+{"event":"committed","tenant":"north","device":"sim-b","ack":0,"accepted":0,"duplicates":0}
+{"event":"committed","tenant":"south","device":"sim-a","ack":0,"accepted":0,"duplicates":0}
+{"event":"committed","tenant":"north","device":"sim-a","ack":7,"accepted":7,"duplicates":0}
+{"event":"committed","tenant":"south","device":"sim-a","ack":7,"accepted":7,"duplicates":0}
+{"event":"committed","tenant":"north","device":"sim-b","ack":7,"accepted":7,"duplicates":0}
+{"event":"committed","tenant":"north","device":"sim-a","ack":9,"accepted":2,"duplicates":0}
+{"event":"committed","tenant":"south","device":"sim-a","ack":9,"accepted":2,"duplicates":0}
+{"event":"committed","tenant":"north","device":"sim-b","ack":10,"accepted":3,"duplicates":0}
+{"event":"committed","tenant":"north","device":"sim-b","ack":12,"accepted":2,"duplicates":0}
+{"event":"committed","tenant":"south","device":"sim-a","ack":11,"accepted":2,"duplicates":0}
+{"event":"committed","tenant":"north","device":"sim-a","ack":11,"accepted":2,"duplicates":0}

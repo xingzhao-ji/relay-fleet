@@ -1,0 +1,14 @@
+cffi==2.1.1
+cryptography==46.0.3
+grpcio==1.84.1
+grpcio-tools==1.84.1
+iniconfig==2.3.1
+packaging==26.3
+pluggy==1.7.0
+protobuf==7.36.2
+pycparser==3.12
+Pygments==2.21.0
+pytest==8.4.2
+pytest-asyncio==1.2.0
+setuptools==84.2.1
+typing_extensions==4.16.0

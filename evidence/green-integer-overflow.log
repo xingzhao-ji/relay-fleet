@@ -1,0 +1,40 @@
+> Task :protobufDummy UP-TO-DATE
+> Task :extractIncludeProto UP-TO-DATE
+> Task :extractProto UP-TO-DATE
+> Task :generateProto UP-TO-DATE
+> Task :compileJava
+> Task :processResources UP-TO-DATE
+> Task :classes
+> Task :jar
+> Task :extractIncludeTestProto UP-TO-DATE
+> Task :extractTestProto UP-TO-DATE
+> Task :generateTestProto NO-SOURCE
+> Task :compileTestJava UP-TO-DATE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+
+> Task :test
+
+StoreTest > configCompareAndSwapAndAcknowledgmentNeverRegress() PASSED
+
+StoreTest > unusableConfigCannotBecomeDesiredState() PASSED
+
+StoreTest > concurrentRetriesRemainUnique() PASSED
+
+StoreTest > revokedDeviceCannotContinueExistingSession() PASSED
+
+StoreTest > conflictingSequenceAndGapHaveNoEffect() PASSED
+
+StoreTest > batchRollsBackBeforeAckWhenLaterSampleConflicts() PASSED
+
+StoreTest > certificateBoundIdentityRejectsSpoofAndTenantCannotQuery() PASSED
+
+StoreTest > oversizeAndUnsupportedProtocolRejectedBeforeWrite() PASSED
+
+StoreTest > replayHasOneEffectAndSurvivesReopen() PASSED
+
+> Task :startScripts
+> Task :installDist
+
+BUILD SUCCESSFUL in 4s
+12 actionable tasks: 5 executed, 7 up-to-date

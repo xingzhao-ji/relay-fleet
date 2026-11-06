@@ -1,0 +1,13 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.12, pytest-8.4.2, pluggy-1.7.0 -- $HOME/.cache/job-apps-runtime/relay-fleet/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: $HOME/Desktop/job-apps/projects/relay-fleet
+plugins: asyncio-1.2.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 3 items
+
+tests/test_transport.py::test_mtls_roles_tenant_isolation_replay_and_deadline PASSED [ 33%]
+tests/test_transport.py::test_stream_limit_and_cancellation_return_admission_capacity PASSED [ 66%]
+tests/test_transport.py::test_operator_cli_reports_only_certificate_tenant PASSED [100%]
+
+============================== 3 passed in 24.88s ==============================

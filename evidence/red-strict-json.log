@@ -1,0 +1,50 @@
+> Task :protobufDummy UP-TO-DATE
+> Task :extractIncludeProto UP-TO-DATE
+> Task :extractProto UP-TO-DATE
+> Task :generateProto UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :extractIncludeTestProto UP-TO-DATE
+> Task :extractTestProto UP-TO-DATE
+> Task :generateTestProto NO-SOURCE
+> Task :compileTestJava
+> Task :processTestResources NO-SOURCE
+> Task :testClasses
+
+> Task :test FAILED
+
+StoreTest > configurationMustBeStrictJsonForPythonInteroperability() FAILED
+    org.opentest4j.AssertionFailedError at StoreTest.java:26
+
+StoreTest > configCompareAndSwapAndAcknowledgmentNeverRegress() PASSED
+
+StoreTest > unusableConfigCannotBecomeDesiredState() PASSED
+
+StoreTest > concurrentRetriesRemainUnique() PASSED
+
+StoreTest > revokedDeviceCannotContinueExistingSession() PASSED
+
+StoreTest > conflictingSequenceAndGapHaveNoEffect() PASSED
+
+StoreTest > batchRollsBackBeforeAckWhenLaterSampleConflicts() PASSED
+
+StoreTest > certificateBoundIdentityRejectsSpoofAndTenantCannotQuery() PASSED
+
+StoreTest > oversizeAndUnsupportedProtocolRejectedBeforeWrite() PASSED
+
+StoreTest > replayHasOneEffectAndSurvivesReopen() PASSED
+
+10 tests completed, 1 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file://$HOME/Desktop/job-apps/projects/relay-fleet/build/reports/tests/test/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 1s
+9 actionable tasks: 2 executed, 7 up-to-date

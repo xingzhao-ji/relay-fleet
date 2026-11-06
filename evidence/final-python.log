@@ -1,0 +1,22 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.12, pytest-8.4.2, pluggy-1.7.0 -- $HOME/.cache/job-apps-runtime/relay-fleet/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: $HOME/Desktop/job-apps/projects/relay-fleet
+plugins: asyncio-1.2.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 11 items
+
+tests/test_agent.py::test_async_spool_serializes_concurrent_producers_and_closes PASSED [  9%]
+tests/test_agent.py::test_cancellation_closes_network_and_disk_worker_with_data_intact PASSED [ 18%]
+tests/test_failure_drill.py::test_live_socket_cut_sigkill_replay_revocation_and_config PASSED [ 27%]
+tests/test_listing.py::test_maximum_config_fleet_is_complete_bounded_and_tenant_scoped PASSED [ 36%]
+tests/test_spool.py::test_bounded_spool_survives_restart_without_reusing_sequence PASSED [ 45%]
+tests/test_spool.py::test_ack_cannot_delete_unsent_or_unallocated_rows PASSED [ 54%]
+tests/test_spool.py::test_config_is_durable_monotonic_and_digest_checked PASSED [ 63%]
+tests/test_spool.py::test_payload_bound_does_not_allocate_sequence PASSED [ 72%]
+tests/test_transport.py::test_mtls_roles_tenant_isolation_replay_and_deadline PASSED [ 81%]
+tests/test_transport.py::test_stream_limit_and_cancellation_return_admission_capacity PASSED [ 90%]
+tests/test_transport.py::test_operator_cli_reports_only_certificate_tenant PASSED [100%]
+
+- generated xml file: $HOME/Desktop/job-apps/projects/relay-fleet/evidence/pytest.xml -
+============================= 11 passed in 32.81s ==============================

@@ -1,0 +1,19 @@
+{
+  "config_and_telemetry_atomicity": {
+    "passed": true,
+    "invalid_ack_inserted_rows": 0,
+    "valid_retry_accepted": 1
+  },
+  "unsigned_sequence_overflow": "INVALID_ARGUMENT",
+  "default_client_large_list": {
+    "status": "RESOURCE_EXHAUSTED",
+    "details": "Stream removed (CLIENT: Received message larger than max (4246000 vs. 4194304))"
+  },
+  "large_client_list": {
+    "registered": 1002,
+    "returned": 1000,
+    "bytes": 4246000,
+    "has_pagination_field": false
+  },
+  "probe_duration_s": 7.207090125011746
+}

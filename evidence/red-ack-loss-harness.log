@@ -1,0 +1,42 @@
+I1023 11:22:56.694918 3443613 fork_posix.cc:71] Other threads are currently calling into gRPC, skipping fork() handlers
+I1023 11:22:56.701926 3443613 fork_posix.cc:71] Other threads are currently calling into gRPC, skipping fork() handlers
+I1023 11:22:56.730461 3443613 fork_posix.cc:71] Other threads are currently calling into gRPC, skipping fork() handlers
+I1023 11:22:57.338500 3443613 fork_posix.cc:71] Other threads are currently calling into gRPC, skipping fork() handlers
+I1023 11:22:58.933691 3443613 fork_posix.cc:71] Other threads are currently calling into gRPC, skipping fork() handlers
+E1023 11:23:02.015857 3444525 ssl_transport_security_utils.cc:115] Corruption detected.
+E1023 11:23:02.015922 3444525 ssl_transport_security_utils.cc:72] error:1e000065:Cipher functions:OPENSSL_internal:BAD_DECRYPT
+E1023 11:23:02.015935 3444525 ssl_transport_security_utils.cc:72] error:1000008b:SSL routines:OPENSSL_internal:DECRYPTION_FAILED_OR_BAD_RECORD_MAC
+E1023 11:23:02.015963 3444525 secure_endpoint.cc:269] Decryption error: TSI_DATA_CORRUPTED
+E1023 11:23:02.016058 3444525 ssl_transport_security_utils.cc:89] SSL_write failed with error SSL_ERROR_SSL
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "$HOME/Desktop/job-apps/projects/relay-fleet/scripts/experiment.py", line 203, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "$HOME/Desktop/job-apps/projects/relay-fleet/scripts/experiment.py", line 201, in main
+    asyncio.run(drill(directory,args.output))
+  File "/opt/homebrew/Cellar/python@3.12/3.12.12_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.12_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.12_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "$HOME/Desktop/job-apps/projects/relay-fleet/scripts/experiment.py", line 143, in drill
+    response=await sync_one(stub,frame)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$HOME/Desktop/job-apps/projects/relay-fleet/tests/test_transport.py", line 62, in sync_one
+    return await call.read()
+           ^^^^^^^^^^^^^^^^^
+  File "$HOME/Desktop/job-apps/projects/relay-fleet/.venv/lib/python3.12/site-packages/grpc/aio/_call.py", line 404, in read
+    await self._raise_for_status()
+  File "$HOME/Desktop/job-apps/projects/relay-fleet/.venv/lib/python3.12/site-packages/grpc/aio/_call.py", line 276, in _raise_for_status
+    raise _create_rpc_error(
+grpc.aio._call.AioRpcError: <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "Stream removed (Unwrap failed (TSI_DATA_CORRUPTED))"
+	debug_error_string = "UNKNOWN:Stream removed (Unwrap failed (TSI_DATA_CORRUPTED))"
+>

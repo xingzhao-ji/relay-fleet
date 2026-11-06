@@ -1,0 +1,13 @@
+.venv
+.gradle
+build
+.runtime
+__pycache__/
+.pytest_cache/
+*.db
+*.db-wal
+*.db-shm
+*.pem
+*.key
+*.crt
+.DS_Store

@@ -1,0 +1,90 @@
+Starting a Gradle Daemon (subsequent builds will be faster)
+> Task :protobufDummy UP-TO-DATE
+> Task :extractIncludeProto
+> Task :extractProto
+> Task :generateProto
+> Task :compileJava
+> Task :processResources
+> Task :classes
+> Task :extractIncludeTestProto
+> Task :extractTestProto
+> Task :generateTestProto NO-SOURCE
+
+> Task :compileTestJava FAILED
+$HOME/Desktop/job-apps/projects/relay-fleet/src/test/java/relay/StoreTest.java:14: error: cannot find symbol
+    Store store;
+    ^
+  symbol:   class Store
+  location: class StoreTest
+$HOME/Desktop/job-apps/projects/relay-fleet/src/test/java/relay/StoreTest.java:15: error: package Store does not exist
+    Store.Principal op = new Store.Principal("aa", "operator", "north", "");
+         ^
+$HOME/Desktop/job-apps/projects/relay-fleet/src/test/java/relay/StoreTest.java:16: error: package Store does not exist
+    Store.Principal dev = new Store.Principal("bb", "device", "north", "sim-1");
+         ^
+$HOME/Desktop/job-apps/projects/relay-fleet/src/test/java/relay/StoreTest.java:15: error: package Store does not exist
+    Store.Principal op = new Store.Principal("aa", "operator", "north", "");
+                                  ^
+$HOME/Desktop/job-apps/projects/relay-fleet/src/test/java/relay/StoreTest.java:16: error: package Store does not exist
+    Store.Principal dev = new Store.Principal("bb", "device", "north", "sim-1");
+                                   ^
+$HOME/Desktop/job-apps/projects/relay-fleet/src/test/java/relay/StoreTest.java:18: error: cannot find symbol
+        store = new Store(dir.resolve("fleet.db").toString());
+                    ^
+  symbol:   class Store
+  location: class StoreTest
+$HOME/Desktop/job-apps/projects/relay-fleet/src/test/java/relay/StoreTest.java:29: error: cannot find symbol
+        store.close(); store = new Store(dir.resolve("fleet.db").toString());
+                                   ^
+  symbol:   class Store
+  location: class StoreTest
+$HOME/Desktop/job-apps/projects/relay-fleet/src/test/java/relay/StoreTest.java:46: error: package Store does not exist
+        var other = new Store.Principal("cc","operator","south","");
+                             ^
+8 errors
+
+[Incubating] Problems report is available at: file://$HOME/Desktop/job-apps/projects/relay-fleet/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileTestJava'.
+> Compilation failed; see the compiler output below.
+  $HOME/Desktop/job-apps/projects/relay-fleet/src/test/java/relay/StoreTest.java:14: error: cannot find symbol
+      Store store;
+      ^
+    symbol:   class Store
+    location: class StoreTest
+  $HOME/Desktop/job-apps/projects/relay-fleet/src/test/java/relay/StoreTest.java:18: error: cannot find symbol
+          store = new Store(dir.resolve("fleet.db").toString());
+                      ^
+    symbol:   class Store
+    location: class StoreTest
+  $HOME/Desktop/job-apps/projects/relay-fleet/src/test/java/relay/StoreTest.java:29: error: cannot find symbol
+          store.close(); store = new Store(dir.resolve("fleet.db").toString());
+                                     ^
+    symbol:   class Store
+    location: class StoreTest
+  $HOME/Desktop/job-apps/projects/relay-fleet/src/test/java/relay/StoreTest.java:15: error: package Store does not exist
+      Store.Principal op = new Store.Principal("aa", "operator", "north", "");
+           ^
+  $HOME/Desktop/job-apps/projects/relay-fleet/src/test/java/relay/StoreTest.java:16: error: package Store does not exist
+      Store.Principal dev = new Store.Principal("bb", "device", "north", "sim-1");
+           ^
+  $HOME/Desktop/job-apps/projects/relay-fleet/src/test/java/relay/StoreTest.java:15: error: package Store does not exist
+      Store.Principal op = new Store.Principal("aa", "operator", "north", "");
+                                    ^
+  $HOME/Desktop/job-apps/projects/relay-fleet/src/test/java/relay/StoreTest.java:16: error: package Store does not exist
+      Store.Principal dev = new Store.Principal("bb", "device", "north", "sim-1");
+                                     ^
+  $HOME/Desktop/job-apps/projects/relay-fleet/src/test/java/relay/StoreTest.java:46: error: package Store does not exist
+          var other = new Store.Principal("cc","operator","south","");
+                               ^
+  8 errors
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights.
+
+BUILD FAILED in 15s
+8 actionable tasks: 8 executed
